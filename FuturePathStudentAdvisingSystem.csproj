@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DC2FC32-3073-40DF-AF95-4A17BCAABADA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FuturePathStudentAdvisingSystem</RootNamespace>
+    <AssemblyName>FuturePathStudentAdvisingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\Entities\AdvisorySession.cs" />
+    <Compile Include="Business\Entities\DegreeInterestMap.cs" />
+    <Compile Include="Business\Entities\DegreeProgramme.cs" />
+    <Compile Include="Business\Entities\DomainConstants.cs" />
+    <Compile Include="Business\Entities\ExportReport.cs" />
+    <Compile Include="Business\Entities\Faculty.cs" />
+    <Compile Include="Business\Entities\FundingFaculty.cs" />
+    <Compile Include="Business\Entities\FundingOption.cs" />
+    <Compile Include="Business\Entities\FundingProgramme.cs" />
+    <Compile Include="Business\Entities\GradeLevel.cs" />
+    <Compile Include="Business\Entities\InterestQuestion.cs" />
+    <Compile Include="Business\Entities\InterestQuestionCategory.cs" />
+    <Compile Include="Business\Entities\Learner.cs" />
+    <Compile Include="Business\Entities\LearnerInterestReport.cs" />
+    <Compile Include="Business\Entities\LearnerSubject.cs" />
+    <Compile Include="Business\Entities\ProgrammeRequirement.cs" />
+    <Compile Include="Business\Entities\RecommendationResult.cs" />
+    <Compile Include="Business\Entities\Subject.cs" />
+    <Compile Include="Business\Entities\UserAccount.cs" />
+    <Compile Include="Business\PasswordHasher.cs" />
+    <Compile Include="DAL\AdvisorySessionDAL.cs" />
+    <Compile Include="DAL\DegreeInterestMapDAL.cs" />
+    <Compile Include="DAL\DegreeProgrammeDAL.cs" />
+    <Compile Include="DAL\ExportReportDAL.cs" />
+    <Compile Include="DAL\FacultyDAL.cs" />
+    <Compile Include="DAL\FundingFacultyDAL.cs" />
+    <Compile Include="DAL\FundingOptionDAL.cs" />
+    <Compile Include="DAL\FundingProgrammeDAL.cs" />
+    <Compile Include="DAL\GradeLevelDAL.cs" />
+    <Compile Include="DAL\InterestQuestionCategoryDAL.cs" />
+    <Compile Include="DAL\InterestQuestionDAL.cs" />
+    <Compile Include="DAL\LearnerDAL.cs" />
+    <Compile Include="DAL\LearnerInterestReportDAL.cs" />
+    <Compile Include="DAL\LearnerSubjectDAL.cs" />
+    <Compile Include="DAL\ProgrammeRequirementDAL.cs" />
+    <Compile Include="DAL\RecommendationResultDAL.cs" />
+    <Compile Include="DAL\SubjectDAL.cs" />
+    <Compile Include="DAL\UserAccountDAL.cs" />
+    <Compile Include="Data\DataExtensions.cs" />
+    <Compile Include="Data\DbConnectionFactory.cs" />
+    <Compile Include="Data\DbHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Database\01_CreateDatabase.sql" />
+    <None Include="Database\02_CreateTables.sql" />
+    <None Include="Database\03_SeedData.sql" />
+    <None Include="Database\04_VerifyData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Advisory.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Advisory_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>Advisory.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- Business logic (controllers) -->
+  <ItemGroup>
+    <Compile Include="Business\BusinessRuleException.cs" />
+    <Compile Include="Business\Models\EligibilityResult.cs" />
+    <Compile Include="Business\Models\DisplayModels.cs" />
+    <Compile Include="Business\Controllers\LoginController.cs" />
+    <Compile Include="Business\Controllers\LookupController.cs" />
+    <Compile Include="Business\Controllers\RecommendationController.cs" />
+    <Compile Include="Business\Controllers\FundingController.cs" />
+    <Compile Include="Business\Controllers\AdvisorySessionController.cs" />
+    <Compile Include="Business\Controllers\LearnerController.cs" />
+    <Compile Include="Business\Controllers\ProgrammeController.cs" />
+    <Compile Include="Business\Controllers\RequirementController.cs" />
+    <Compile Include="Business\Controllers\QuestionnaireController.cs" />
+    <Compile Include="Business\Controllers\ReportController.cs" />
+  </ItemGroup>
+  <!-- MDI presentation forms -->
+  <ItemGroup>
+    <Compile Include="Presentation\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Public\frmWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Public\frmWelcome.Designer.cs">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmLearnerProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmLearnerProfile.Designer.cs">
+      <DependentUpon>frmLearnerProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmSubjectsMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmSubjectsMarks.Designer.cs">
+      <DependentUpon>frmSubjectsMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmInterestQuestionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmInterestQuestionnaire.Designer.cs">
+      <DependentUpon>frmInterestQuestionnaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmDegreeSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmDegreeSelection.Designer.cs">
+      <DependentUpon>frmDegreeSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmAdvisoryOutcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmAdvisoryOutcome.Designer.cs">
+      <DependentUpon>frmAdvisoryOutcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmAlternativeProgrammes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmAlternativeProgrammes.Designer.cs">
+      <DependentUpon>frmAlternativeProgrammes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmFundingInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmFundingInformation.Designer.cs">
+      <DependentUpon>frmFundingInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmAdvisorySummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Advising\frmAdvisorySummary.Designer.cs">
+      <DependentUpon>frmAdvisorySummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Advisor\frmAdvisorDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Advisor\frmAdvisorDashboard.Designer.cs">
+      <DependentUpon>frmAdvisorDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Advisor\frmLearnerSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Advisor\frmLearnerSessions.Designer.cs">
+      <DependentUpon>frmLearnerSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Admin\frmAdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Admin\frmAdminDashboard.Designer.cs">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Admin\frmFacultiesProgrammes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Admin\frmFacultiesProgrammes.Designer.cs">
+      <DependentUpon>frmFacultiesProgrammes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Admin\frmProgrammeRequirements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Admin\frmProgrammeRequirements.Designer.cs">
+      <DependentUpon>frmProgrammeRequirements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Admin\frmQuestionnaireMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Admin\frmQuestionnaireMaintenance.Designer.cs">
+      <DependentUpon>frmQuestionnaireMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Admin\frmFundingMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Admin\frmFundingMaintenance.Designer.cs">
+      <DependentUpon>frmFundingMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Reports\frmReportSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Reports\frmReportSelection.Designer.cs">
+      <DependentUpon>frmReportSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Reports\frmReportPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Reports\frmReportPreview.Designer.cs">
+      <DependentUpon>frmReportPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Public\frmStaffLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Public\frmStaffLogin.Designer.cs">
+      <DependentUpon>frmStaffLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Theme.cs" />
+    <Compile Include="Presentation\AppSession.cs" />
+    <Compile Include="Presentation\UiHelpers.cs" />
+    <EmbeddedResource Include="Presentation\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Public\frmWelcome.resx">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Advising\frmLearnerProfile.resx">
+      <DependentUpon>frmLearnerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Advising\frmSubjectsMarks.resx">
+      <DependentUpon>frmSubjectsMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Advising\frmInterestQuestionnaire.resx">
+      <DependentUpon>frmInterestQuestionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Advising\frmDegreeSelection.resx">
+      <DependentUpon>frmDegreeSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Advising\frmAdvisoryOutcome.resx">
+      <DependentUpon>frmAdvisoryOutcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Advising\frmAlternativeProgrammes.resx">
+      <DependentUpon>frmAlternativeProgrammes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Advising\frmFundingInformation.resx">
+      <DependentUpon>frmFundingInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Advising\frmAdvisorySummary.resx">
+      <DependentUpon>frmAdvisorySummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Advisor\frmAdvisorDashboard.resx">
+      <DependentUpon>frmAdvisorDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Advisor\frmLearnerSessions.resx">
+      <DependentUpon>frmLearnerSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Admin\frmAdminDashboard.resx">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Admin\frmFacultiesProgrammes.resx">
+      <DependentUpon>frmFacultiesProgrammes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Admin\frmProgrammeRequirements.resx">
+      <DependentUpon>frmProgrammeRequirements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Admin\frmQuestionnaireMaintenance.resx">
+      <DependentUpon>frmQuestionnaireMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Admin\frmFundingMaintenance.resx">
+      <DependentUpon>frmFundingMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Reports\frmReportSelection.resx">
+      <DependentUpon>frmReportSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Reports\frmReportPreview.resx">
+      <DependentUpon>frmReportPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Public\frmStaffLogin.resx">
+      <DependentUpon>frmStaffLogin.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
